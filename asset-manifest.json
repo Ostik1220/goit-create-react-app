@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Ostik1220/goit-create-react-app/static/css/main.f855e6bc.css",
+    "main.js": "/Ostik1220/goit-create-react-app/static/js/main.8b041afe.js",
+    "index.html": "/Ostik1220/goit-create-react-app/index.html",
+    "main.f855e6bc.css.map": "/Ostik1220/goit-create-react-app/static/css/main.f855e6bc.css.map",
+    "main.8b041afe.js.map": "/Ostik1220/goit-create-react-app/static/js/main.8b041afe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.8b041afe.js"
+  ]
+}
