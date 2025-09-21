@@ -1,14 +1,14 @@
-import { Rcepies } from './components/recepies';
+import { Recepies } from './components/recepies';
 import './App.css';
 export const data = require('./recepies.json')
 function App() {
   return (
     <div className="App">
       {
-      console.log(Rcepies(data))
+      console.log(data)
 }
 <ul>
-  <Rcepies data={data}/>
+  <Recepies data={data}/>
 </ul>
     </div>
   );

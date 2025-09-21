@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 
-export const Rcepies = (data) => {
-return data.map((item) => (
+export const Recepies = ({data}) => {
+const newList = data.map((item) => (
             <li>
             <h2>{item.name}</h2>
             <p>час приготування {item.time}</p>
@@ -9,4 +10,10 @@ return data.map((item) => (
             <p>Складність: {item.difficulty}</p>
             </li>
   ));
+  return newList;
+}
+
+
+Recepies.propTypes = {
+      data: PropTypes.array.isRequired
 }
