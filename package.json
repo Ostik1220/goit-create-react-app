@@ -2,7 +2,7 @@
   "name": "goit-create-react-app",
   "version": "0.1.0",
   "private": true,
-    "homepage": "https://github.com/Ostik1220/goit-create-react-app",
+    "homepage": "https://ostik1220.github.io/goit-create-react-app/",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
