@@ -7,9 +7,7 @@ function App() {
       {
       console.log(data)
 }
-<ul>
   <Recepies data={data}/>
-</ul>
     </div>
   );
 }

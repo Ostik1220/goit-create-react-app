@@ -1,0 +1,79 @@
+.photo{
+    width: 240px;
+    height: 240px;
+    border-radius: 10px;
+}
+
+.name{
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.recepies{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.list{
+    display: flex;
+    gap: 30px;
+    padding: 0 10px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.statics{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.difficultyList{
+display: flex; 
+gap: 10px;
+padding: 0 10px;
+}
+
+.difficultyBox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 10px;
+        background-color: white;
+    border-radius: 30px;
+    padding:10px 10px 10px;
+}
+
+.difficulty{
+background-color: burlywood;
+border-radius: 30px;
+    padding: 5px 10px;
+}
+
+.chosenDifficulty{
+    background-color: red;
+    border-radius: 30px;
+    color: white;
+    padding: 5px 10px;
+}
+
+.difficultyName{
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
