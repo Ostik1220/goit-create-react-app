@@ -14,7 +14,7 @@ import {
   Difficulty,
   ChosenDifficulty,
   DifficultyName,
-} from "./recepie.styles.jsx";
+} from "./Recepie.styled.jsx";
 
 export const Recepies = ({ data }) => {
   const newList = data.map((item) => {
