@@ -1,76 +1,55 @@
 import PropTypes from "prop-types";
-import styles from "./recepie.module.css";
 import { IoMdTimer } from "react-icons/io";
 import { IoStatsChart } from "react-icons/io5";
 import { AiTwotonePieChart } from "react-icons/ai";
-
+import {
+  Photo,
+  Name,
+  Item,
+  RecepieList,
+  List,
+  Statics,
+  DifficultyBox,
+  DifficultyList,
+  Difficulty,
+  ChosenDifficulty,
+  DifficultyName,
+} from "./recepie.styles.jsx";
 
 export const Recepies = ({ data }) => {
   const newList = data.map((item) => {
-    let difficulty = "";
-
-    if (item.difficulty === 0) {
-       difficulty = <>
-      <ul className={styles.difficultyList}> 
-            <li className={styles.chosen}>
-           <p className={styles.chosenDifficulty}>easy</p> 
-           </li>
-           <li className={styles.difficulties}>
-           <p className={styles.difficulty}>medium</p> 
-           </li>
-           <li className={styles.difficulties} >
-           <p className={styles.difficulty}>hard</p> 
-           </li>
-      </ul>
-      </>;
-    } else if (item.difficulty === 1) {
-      difficulty = <>
-      <ul className={styles.difficultyList}> 
-            <li className={styles.difficulties}>
-           <p className={styles.difficulty}>easy</p> 
-           </li>
-            <li className={styles.chosen}>
-           <p className={styles.chosenDifficulty}>medium</p> 
-           </li>
-            <li className={styles.difficulties}>
-           <p className={styles.difficulty}>hard</p> 
-           </li>
-      </ul>
-      </>;
-    } else if (item.difficulty === 2) {
-      difficulty = <>
-      <ul className={styles.difficultyList}> 
-            <li className={styles.difficulties}>
-           <p className={styles.difficulty}>easy</p> 
-           </li>
-           <li className={styles.difficulties}>
-           <p className={styles.difficulty}>medium</p> 
-           </li>
-           <li className={styles.chosen}>
-           <p className={styles.chosenDifficulty}>hard</p> 
-           </li>
-      </ul>
-      </>;
-    }
+    const difficulties = ["easy", "medium", "hard"];
 
     return (
-      <li key={item.name}  className={styles.item}>
-        <img src={item.image} alt={item.name} className={styles.photo}/>
-        <h2 className={styles.name}>{item.name}</h2>
-        <ul className={styles.list}>
-        <li className={styles.statics}><IoMdTimer/>  <p className={styles.time}>{item.time} min</p></li>
-        <li className={styles.statics}><IoStatsChart/>  <p className={styles.calories}>{item.calories} calories</p></li>
-        <li className={styles.statics}><AiTwotonePieChart/>  <p className={styles.servings}>{item.servings} servings</p></li>
-        </ul>
-        <div className={styles.difficultyBox}>
-            <p className={styles.difficultyName}>Difficulty</p>
-            {difficulty}
-        </div>
-      </li>
+      <Item key={item.name}>
+        <Photo src={item.image} alt={item.name} />
+        <Name>{item.name}</Name>
+
+        <List>
+          <Statics><IoMdTimer /> <p>{item.time} min</p></Statics>
+          <Statics><IoStatsChart /> <p>{item.calories} calories</p></Statics>
+          <Statics><AiTwotonePieChart /> <p>{item.servings} servings</p></Statics>
+        </List>
+
+        <DifficultyBox>
+          <DifficultyName>Difficulty</DifficultyName>
+          <DifficultyList>
+            {difficulties.map((level, i) => (
+              <li key={level}>
+                {item.difficulty === i ? (
+                  <ChosenDifficulty>{level}</ChosenDifficulty>
+                ) : (
+                  <Difficulty>{level}</Difficulty>
+                )}
+              </li>
+            ))}
+          </DifficultyList>
+        </DifficultyBox>
+      </Item>
     );
   });
 
-  return <ul className={styles.recepies}>{newList}</ul>;
+  return <RecepieList>{newList}</RecepieList>;
 };
 
 Recepies.propTypes = {
